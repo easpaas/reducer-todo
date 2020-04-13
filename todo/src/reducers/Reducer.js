@@ -1,7 +1,7 @@
 import React from "react";
 
 // Set up initial state
-const initialState = {
+export const initialState = {
   todos: [{
     item: 'Learn about reducers',
     completed: false,
@@ -16,7 +16,7 @@ const initialState = {
 
 
 // Reducer
-const Reducer = (state = initialState, action) => {
+export const Reducer = (state = initialState, action) => {
   switch(action.type) {
     case '':
       // code block
@@ -29,3 +29,4 @@ const Reducer = (state = initialState, action) => {
   // and just return the state given to us.
   return state;
 }
+

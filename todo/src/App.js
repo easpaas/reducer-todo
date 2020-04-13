@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
 
-const initialState = {
-  todos: [],
-  completed: false
-};
+import TodoForm from './components/TodoForm';
 
 function App() {
   return (
     <div className="App">
       <h1>TODOs with Reducers</h1>
-      {/* <TodoList data={this.state.data} /> */}
+      <TodoForm />
     </div>
   );
 }
