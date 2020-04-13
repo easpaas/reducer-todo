@@ -18,11 +18,24 @@ export const initialState = {
 // Reducer
 export const Reducer = (state = initialState, action) => {
   switch(action.type) {
-    case '':
-      // code block
+    case 'ADD_TODO':
+      return [
+        ...state,
+        {
+          item: action.text, 
+          completed: false,
+          id: Date.now()
+        }
+      ]
       break;
+      case 'TOGGLE_TODO': 
+        return state; 
+        break;
+      case 'CLEAR_COMPLETED':
+        return state;
+        break;  
     default:
-      // code block
+      return '';
   }
 
   // For now, don't handle any actions

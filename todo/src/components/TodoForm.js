@@ -11,7 +11,9 @@ function TodoForm() {
   
   const handleClear = e => {
     e.preventDefault();
+    
     // TODO dispatch action to clear all completed items
+
     console.log("dispatch action CLEAR_COMPLETED")
   }
 
@@ -19,10 +21,10 @@ function TodoForm() {
     e.preventDefault();
     setFormData(" ");
 
-    console.log("dispatch action ADD_TODO")
-
     // TODO dispatch action to update todos
-  
+
+    console.log("dispatch action ADD_TODO")
+    
   }
 
   return (
