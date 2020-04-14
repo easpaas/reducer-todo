@@ -12,17 +12,13 @@ function TodoForm() {
   const handleClear = e => {
     e.preventDefault();
     
-    // TODO dispatch action to clear all completed items
-
     console.log("dispatch action CLEAR_COMPLETED")
   }
 
   const handleSubmit = e => {
     e.preventDefault();
     setFormData(" ");
-
-    // TODO dispatch action to update todos
-
+  
     console.log("dispatch action ADD_TODO")
     
   }

@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <h1>TODOs with Reducers</h1>
       <TodoForm />
+      <TodoList />
     </div>
   );
 }
