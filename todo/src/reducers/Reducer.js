@@ -4,7 +4,7 @@ export const initialState = {
 };
 
 // Reducer
-export const Reducer = (state, action) => {
+export const Reducer = (state = initialState, action) => {
   switch (action.type) {
     case "ADD_TODO":
       return {
