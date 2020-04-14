@@ -15,17 +15,18 @@ export const Reducer = (state = initialState, action) => {
         ]
       };
     case "TOGGLE_ITEM":
+      console.log(action)
       return {
         ...state,
         todos: state.todos.map(item => {
-          if (action.payload.id === item.id) {
+          if (action.payload === item.id) {
             return {
               ...item,
               completed: !item.completed
             };
           }
           return item;
-        })
+          })
       };
     case "CLEAR_COMPLETED":
       return {

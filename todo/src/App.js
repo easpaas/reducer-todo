@@ -18,9 +18,9 @@ function App() {
     dispatch({ type: 'ADD_TODO', payload: newTodo })
   };
 
-  // const toggleItem = id => {
-  //   dispatch({ type: 'TOGGLE_ITEM', payload: id })
-  // };
+  const toggleItem = id => {
+    dispatch({ type: 'TOGGLE_ITEM', payload: id })
+  };
 
   const clearCompleted = e => {
     e.preventDefault();
@@ -36,7 +36,7 @@ function App() {
       />
       <TodoList 
         list={state.todos} 
-        // toggle={toggleItem}
+        toggle={toggleItem}
       />
     </div>
   );
