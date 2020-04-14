@@ -15,7 +15,6 @@ export const Reducer = (state = initialState, action) => {
         ]
       };
     case "TOGGLE_ITEM":
-      console.log(action)
       return {
         ...state,
         todos: state.todos.map(item => {
