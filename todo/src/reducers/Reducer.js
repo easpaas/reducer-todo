@@ -4,19 +4,19 @@ export const initialState = {
 };
 
 // Reducer
-export const Reducer = (state = initialState, action) => {
+export const Reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TODO":
       return {
-        ...initialState,
+        ...state,
         todos: [
-          ...initialState.todos, 
+          ...state.todos, 
           action.payload
         ]
       };
     case "TOGGLE_ITEM":
       return {
-        ...initialState,
+        ...state,
         todos: state.todos.map(item => {
           if (action.payload.id === item.id) {
             return {
@@ -29,7 +29,7 @@ export const Reducer = (state = initialState, action) => {
       };
     case "CLEAR_COMPLETED":
       return {
-        ...initialState,
+        ...state,
         todos: state.todos.filter(item => !item.completed)
       };
     default:

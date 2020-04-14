@@ -1,8 +1,12 @@
 import React from 'react';
+import './styles.css';
 
 const Todo = (props) => {
   return (
-    <div className="todo-container">
+    <div
+      className={`${props.completed ? 'completed' : ''}`}
+      onClick={() => {return props.toggleItem}}
+    >
       {
         props.task
       }

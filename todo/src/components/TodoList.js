@@ -8,12 +8,16 @@ const TodoList = (props) => {
     <div className="list-container">
       <h2>LIST</h2>
       {
+        console.log(props.list)
+      }
+      {
         props.list.map(item => {
           return (
             <Todo 
               key={item.id} 
               task={item.task} 
-              toggleItem={item.toggleItem}
+              toggleItem={props.toggleItem}
+              completed={item.completed}
             />
           )
         })

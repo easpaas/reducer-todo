@@ -16,8 +16,7 @@ function App() {
       completed: false
     };
     dispatch({ type: 'ADD_TODO', payload: newTodo })
-  
-};
+  };
 
   const toggleItem = id => {
     dispatch({ type: 'TOGGLE_ITEM', payload: id })
