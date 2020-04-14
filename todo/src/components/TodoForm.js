@@ -2,25 +2,17 @@ import React, { useState } from 'react';
 import './styles.css';
 
 
-function TodoForm() {
+function TodoForm(props) {
   const [formData, setFormData] = useState(" ");
 
   const handleChanges = e => {
     setFormData(e.target.value);
   }
   
-  const handleClear = e => {
-    e.preventDefault();
-    
-    console.log("dispatch action CLEAR_COMPLETED")
-  }
-
   const handleSubmit = e => {
     e.preventDefault();
+    props.add(e, formData);
     setFormData(" ");
-  
-    console.log("dispatch action ADD_TODO")
-    
   }
 
   return (
@@ -37,7 +29,7 @@ function TodoForm() {
         <button className="btn add">Add item</button>
         <button 
           className="btn clear" 
-          onClick={handleClear}
+          onClick={(e) => {props.clear(e)}}
         >
           Clear completed
         </button>

@@ -1,18 +1,4 @@
-/* Header styles */
-.header-container {
-  padding: 2%;
-  margin-bottom: 5%;
-  text-align: center;
-  border: 2px solid darkorange;
-}
-#appTitle {
-  text-align: center; 
-  font-weight: 300; 
-  font-variant: small-caps;
-  margin: 0;
-}
-
-/* Grocery Form styles */
+/* TODO Form styles */
 .form {
   width: 50%;
   margin: 0 auto;
@@ -46,8 +32,10 @@ form {
 }
 
 
-/* Grocery List styles */
+/* TODO List styles */
 .list-container {
   margin: 5% 0;
   text-align: center;
+  background: grey;
+  border: 2px solid orange;
 }
